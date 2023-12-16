@@ -7,6 +7,11 @@ import MovieList from '../movie-list/movie-list'
 import MoviesAddForm from '../movies-add-form/movies-add-form'
 
 const App = () => {
+  const data = [{ name: 'Empire of osman' , viewers: 988, favourite: false, id: 1 },
+                {name: 'Avengers', viewers: 789, favourite: false, id: 2},
+                {name: 'Kapitan Marvel', viewers:1091, favourite: true, id: 3},
+  ]
+
     return ( 
     <div className="app font-monospace">
       <div className="content">
@@ -15,7 +20,7 @@ const App = () => {
          <SearchPanel />
          <AppFilter />
         </div>
-        <MovieList />
+        <MovieList data={data} />
         <MoviesAddForm />
       </div>
     </div>
